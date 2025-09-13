@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Mac 系统文件
+.DS_Store
