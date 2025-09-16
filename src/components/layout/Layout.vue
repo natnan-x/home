@@ -1,0 +1,19 @@
+<template>
+  <div class="flex w-full flex-col pt-6">
+    <div class="lg:px-25 px-4">
+      <LayoutHeader />
+      <main>
+        <!-- 子页面渲染在这里 -->
+        <RouterView />
+      </main>
+      <LayoutFooter />
+      <Header />
+      <Footer />
+    </div>
+  </div>
+</template>
+<script setup>
+import LayoutHeader from "@/components/layout/Header.vue";
+import LayoutFooter from "@/components/layout/Footer.vue";
+import { RouterView } from "vue-router";
+</script>

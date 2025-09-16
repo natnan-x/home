@@ -29,7 +29,7 @@
       </div>
     </div>
     <label class="swap swap-rotate">
-      <input type="checkbox" class="theme-controller" value="dark" />
+      <input type="checkbox" class="theme-controller" value="black" />
       <svg
         class="swap-off h-5 w-5 fill-current"
         xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@
             "
             @click="closeMenu"
           >
-            {{ value.name }}
+            {{ value.fullName }}
           </li>
         </ul>
       </div>
@@ -81,11 +81,15 @@ import { ref } from "vue";
 import { ChevronDown } from "lucide-vue-next";
 
 const menuList = ref([
-  { name: "About", href: "#", current: true },
-  { name: "Articles", href: "#", current: false },
-  { name: "Speaking", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Uses", href: "#", current: false },
+  { name: "About", fullName: "About Me", href: "#", current: true },
+  { name: "Works", fullName: "Work experience", href: "#", current: false },
+  {
+    name: "Projects",
+    fullName: "Project Experience",
+    href: "#",
+    current: false,
+  },
+  { name: "Uses", fullName: "Using Tools", href: "#", current: false },
 ]);
 
 const openMenu = () => {
