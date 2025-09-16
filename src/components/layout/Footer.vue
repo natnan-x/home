@@ -6,8 +6,8 @@
       <!-- 右侧版权信息 -->
       <p class="text-gray-500 text-sm text-center lg:text-right">
         <span>© </span>
-        <span>NatNan.</span>
-        Vue3 + Vite + TailwindCSS
+        <span>NatNan. ChengDu</span>
+        2025.09.01
       </p>
     </div>
   </footer>

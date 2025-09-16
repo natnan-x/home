@@ -9,12 +9,13 @@
       <p
         v-for="value in menuList"
         :key="value.name"
-        class="text-sm cursor-pointer px-1 transition hover:text-teal-500"
+        class="text-sm cursor-pointer px-2 transition hover:text-teal-500"
         :class="
-          value.current
+          isActive(value.path)
             ? 'font-bold text-teal-500'
             : 'opacity-60 hover:opacity-100'
         "
+        @click="linkTo(value.path)"
       >
         {{ value.name }}
       </p>
@@ -79,18 +80,25 @@
 <script setup>
 import { ref } from "vue";
 import { ChevronDown } from "lucide-vue-next";
+import { useRoute } from "vue-router";
 
 const menuList = ref([
-  { name: "About", fullName: "About Me", href: "#", current: true },
-  { name: "Works", fullName: "Work experience", href: "#", current: false },
+  { name: "About", fullName: "About Me", path: "/about" },
+  { name: "Work", fullName: "Work experience", path: "/work" },
   {
-    name: "Projects",
+    name: "Project",
     fullName: "Project Experience",
-    href: "#",
-    current: false,
+    path: "/project",
   },
-  { name: "Uses", fullName: "Using Tools", href: "#", current: false },
+  { name: "Uses", fullName: "Using Tools", path: "/uses" },
+  { name: "Life", fullName: "Rich Life", path: "/life" },
 ]);
+
+const route = useRoute();
+const isActive = (path) => route.path === path;
+const linkTo = (path) => {
+  window.location = path;
+};
 
 const openMenu = () => {
   const menuModal = document.getElementById("my_menu_modal");
