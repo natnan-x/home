@@ -6,12 +6,20 @@
         class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 pt-30"
       >
         <div class="lg:pl-20">
-          <div class="max-w-xs px-2.5 lg:max-w-none">
+          <figure class="hover-gallery max-w-xs px-2.5 lg:max-w-none rotate-3">
             <img
-              src="../assets/portrait.webp"
-              class="aspect-square bg-zinc-100 dark:bg-zinc-800 object-cover rotate-3 rounded-2xl"
+              class="aspect-square bg-zinc-100 dark:bg-zinc-800 object-cover rounded-2xl"
+              src="../assets/about3.jpg"
             />
-          </div>
+            <img
+              class="aspect-square bg-zinc-100 dark:bg-zinc-800 object-cover rounded-2xl"
+              src="../assets/zbout1.jpg"
+            />
+            <img
+              class="aspect-square bg-zinc-100 dark:bg-zinc-800 object-cover rounded-2xl"
+              src="../assets/about2.jpg"
+            />
+          </figure>
         </div>
         <div class="lg:order-first lg:row-span-2">
           <h1 class="text-4xl font-bold">
@@ -51,7 +59,7 @@
           <ul role="list">
             <li class="flex">
               <a
-                class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
                 href="#"
               >
                 <Github size="20" /><span class="ml-4">Follow on GitHub</span>
@@ -59,23 +67,23 @@
             </li>
             <li class="mt-4 flex">
               <a
-                class="group flex justify-center text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
+                class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
                 href="#"
-                ><Instagram size="20" /><span class="ml-4"
-                  >Follow on Instagram</span
-                ></a
               >
+                <Instagram size="20" />
+                <span class="ml-4">Follow on Instagram</span>
+              </a>
             </li>
             <li
               class="mt-8 border-t flex pt-8 border-[color:var(--color-base-300)]"
             >
               <a
-                class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-                href="mailto:spencer@planetaria.tech"
-                ><Mail size="20" /><span class="ml-4"
-                  >natnan0405@163.com</span
-                ></a
+                class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
+                href="#"
               >
+                <Mail size="20" />
+                <span class="ml-4">natnan0405@163.com</span>
+              </a>
             </li>
           </ul>
         </div>
