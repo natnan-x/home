@@ -28,14 +28,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="lg:px-25 max-w-6xl mx-auto flex flex-col justify-between h-screen md:justify-start">
+  <div class="lg:px-25 max-w-6xl mx-auto flex flex-col justify-between h-screen md:justify-center">
     <div class="flex-1 py-12 px-8 text-lg leading-relaxed text-left md:flex-none">
       <h1 class="text-sm font-medium">NatNan</h1>
       <div class="divider divider-start font-bold mt-1">欢迎你的到来</div>
       <div ref="typeTarget" class="mt-14 min-h-100"></div>
     </div>
     <div
-      class="flex justify-between h-14 px-4 bg-black opacity-90 text-white items-center cursor-pointer md:w-30 md:m-8"
+      class="flex justify-between h-14 px-8 bg-black opacity-90 text-white items-center cursor-pointer md:w-30 md:m-8 md:px-4"
       @click="$router.push('/work')">
       <span>ENTER</span>
       <SquareArrowRight />
