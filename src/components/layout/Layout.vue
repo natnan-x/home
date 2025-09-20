@@ -7,13 +7,14 @@
         <RouterView />
       </main>
       <LayoutFooter />
-      <Header />
-      <Footer />
     </div>
   </div>
+  <LayoutMusic />
 </template>
 <script setup>
 import LayoutHeader from "@/components/layout/Header.vue";
 import LayoutFooter from "@/components/layout/Footer.vue";
+import LayoutMusic from "@/components/layout/Music.vue";
+
 import { RouterView } from "vue-router";
 </script>
