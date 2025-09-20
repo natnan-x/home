@@ -5,7 +5,9 @@
     </div>
 
     <div class="fab-close">
-      <span class="btn btn-circle btn-lg btn-error"><X /></span>
+      <span class="btn btn-circle btn-lg btn-error">
+        <X />
+      </span>
     </div>
 
     <div>

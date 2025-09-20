@@ -26,6 +26,9 @@ importers:
       pinia:
         specifier: ^3.0.3
         version: 3.0.3(vue@3.5.21)
+      t-writer.js:
+        specifier: ^1.0.4
+        version: 1.0.4
       tailwindcss:
         specifier: ^4.1.13
         version: 4.1.13
@@ -1467,6 +1470,9 @@ packages:
   synckit@0.11.11:
     resolution: {integrity: sha512-MeQTA1r0litLUf0Rp/iisCaL8761lKAZHaimlbGK4j0HysC4PLfqygQj9srcs0m2RdtDYnF8UuYyKpbjHYp7Jw==}
     engines: {node: ^14.18.0 || >=16.0.0}
+
+  t-writer.js@1.0.4:
+    resolution: {integrity: sha512-VDmg2L43dYVbdmduaX5Ea+osiXVtgIsVDr/sfuT01Q2Ypvy6AZINyb4JROP1wEBATM5++l74vio0Au1s57XVJg==}
 
   tailwindcss@4.1.13:
     resolution: {integrity: sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w==}
@@ -2936,6 +2942,8 @@ snapshots:
   synckit@0.11.11:
     dependencies:
       '@pkgr/core': 0.2.9
+
+  t-writer.js@1.0.4: {}
 
   tailwindcss@4.1.13: {}
 

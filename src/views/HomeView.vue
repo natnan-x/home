@@ -1,49 +1,44 @@
+<script setup>
+import { onMounted, ref } from "vue";
+import Typewriter from "t-writer.js";
+import { SquareArrowRight } from "lucide-vue-next";
+
+const typeTarget = ref(null);
+
+onMounted(() => {
+  if (typeTarget.value) {
+    const writer = new Typewriter(typeTarget.value, {
+      loop: false,
+      typeSpeed: 40,
+      deleteSpeed: 0,
+    });
+
+    writer
+      .type("In a world where facts can be blurred<br>")
+      .type("and science, often filtered,<br>")
+      .type("<strong>the truth can be hard to find.</strong><br><br>")
+      .type("So as we launch our new GF 15% Solution<br>")
+      .type("we're taking complex scientific papers<br>")
+      .type("and breaking them down<br>")
+      .type("to clarify industry myths.<br><br>")
+      .type("<strong>Because the Truth should be Ordinary.</strong>")
+      .start()
+  }
+});
+</script>
+
 <template>
-  <div class="min-h-screen">
-    <div class="p-6">
-      <h1 class="text-4xl font-bold">DaisyUI Theme Switcher</h1>
-      <p class="mt-4 text-xl">当前主题：{{ theme }}</p>
-      <button @click="toggleTheme" class="btn btn-primary mt-4">切换主题</button>
+  <div class="lg:px-25 max-w-6xl mx-auto flex flex-col justify-between h-screen md:justify-start">
+    <div class="flex-1 py-12 px-8 text-lg leading-relaxed text-left md:flex-none">
+      <h1 class="text-sm font-medium">NatNan</h1>
+      <div class="divider divider-start font-bold mt-1">欢迎你的到来</div>
+      <div ref="typeTarget" class="mt-14 min-h-100"></div>
+    </div>
+    <div
+      class="flex justify-between h-14 px-4 bg-black opacity-90 text-white items-center cursor-pointer md:w-30 md:m-8"
+      @click="$router.push('/work')">
+      <span>ENTER</span>
+      <SquareArrowRight />
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-// 主题状态（light, dark, night）
-const theme = ref('light')
-
-// 切换主题
-const toggleTheme = () => {
-  const nextTheme = theme.value === 'light' ? 'dark' : theme.value === 'dark' ? 'night' : 'light'
-
-  theme.value = nextTheme
-
-  // 切换主题类，确保添加到 <html> 元素
-  document.documentElement.setAttribute('data-theme', nextTheme)
-
-  // 将主题保存在 localStorage 中
-  localStorage.setItem('theme', nextTheme)
-}
-
-// 页面加载时检查 localStorage 中是否有保存的主题
-onMounted(() => {
-  const savedTheme = localStorage.getItem('theme')
-  if (savedTheme) {
-    theme.value = savedTheme
-    document.documentElement.setAttribute('data-theme', savedTheme)
-  }
-})
-</script>
-
-<style scoped>
-button {
-  background-color: #3b82f6;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-</style>
