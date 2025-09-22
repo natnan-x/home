@@ -5,17 +5,30 @@ import musicC from "@/assets/music/c.mp3";
 
 const musicList = [musicA, musicB, musicC];
 
-// 挂载全局单例 Audio，避免 HMR 重置
+// ---- 预加载函数 ----
+function preloadMusic(list) {
+  list.forEach((src) => {
+    const audio = new Audio();
+    audio.src = src;
+    // 仅预加载，不播放
+    audio.preload = "auto";
+  });
+}
+
+// 全局单例
 if (!window._audio) {
   window._audio = new Audio(musicList[0]);
-  window._audio.loop = false; // 不循环单首
+  window._audio.loop = false;
   window._currentIndex = 0;
   window._isPlaying = false;
+
+  // 初始化时预加载所有音乐
+  preloadMusic(musicList);
 }
 
 const audio = window._audio;
 
-// 绑定自动下一首事件
+// 自动下一首
 if (!audio._hasEndedEvent) {
   audio.addEventListener("ended", () => {
     window._currentIndex = (window._currentIndex + 1) % musicList.length;
@@ -65,7 +78,7 @@ export const useMusicStore = defineStore("music", {
   },
 });
 
-// 支持 HMR 保持 store 状态
+// HMR
 if (import.meta.hot) {
   import.meta.hot.accept(acceptHMRUpdate(useMusicStore, import.meta.hot));
 }

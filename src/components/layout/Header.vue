@@ -27,8 +27,10 @@
           <Moon size="20" v-if="theme === 'dark'" />
           <Sun size="20" v-else />
         </p>
-        <Languages size="20" class="cursor-pointer" @click="toggleLang" />
-        {{ localStore.current === 'en' ? '中文' : 'English' }}
+        <p class="flex items-center">
+          <Languages size="20" class="cursor-pointer" @click="toggleLang" />
+          <!-- {{ localStore.current === 'en' ? 'ZH' : 'EN' }} -->
+        </p>
       </div>
 
     </div>
