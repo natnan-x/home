@@ -13,15 +13,20 @@ const route = useRoute();
 async function loadPageData(pageName) {
   await store.initPage(pageName);
 }
+
 async function loadCommonData() {
   await store.initCommon();
 }
+
 
 // 监听路由变化
 watch(
   () => route.name,
   (newName) => {
-    if (newName) loadPageData(newName);
+    if (newName) {
+      loadPageData(newName);
+      loadCommonData()
+    }
   },
   { immediate: true } // 立即执行一次
 );
@@ -31,12 +36,19 @@ watch(
   () => {
     if (route.name) {
       loadPageData(route.name)
-      loadCommonData()
     };
   }
 );
 </script>
 
 <template>
+  <!-- 全局 loading -->
+  <div v-if="store.loading" class="fixed inset-0 bg-base-100 opacity-90 flex items-center justify-center z-50">
+    <span class="loading loading-ball loading-xs"></span>
+    <span class="loading loading-ball loading-sm"></span>
+    <span class="loading loading-ball loading-md"></span>
+    <span class="loading loading-ball loading-lg"></span>
+    <span class="loading loading-ball loading-xl"></span>
+  </div>
   <RouterView />
 </template>

@@ -57,5 +57,4 @@ onMounted(async () => {
 const setVh = () => {
   document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
 }
-
 </script>

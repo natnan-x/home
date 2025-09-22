@@ -29,7 +29,6 @@
         </p>
         <p class="flex items-center">
           <Languages size="20" class="cursor-pointer" @click="toggleLang" />
-          <!-- {{ localStore.current === 'en' ? 'ZH' : 'EN' }} -->
         </p>
       </div>
     </div>
@@ -57,8 +56,8 @@ import { Moon, Sun, ChevronDown, Languages } from 'lucide-vue-next';
 
 import { storeToRefs } from 'pinia'
 import { useThemeStore } from '@/stores/theme'
-import { useLocaleStore } from "@/stores/locale";
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { useLocaleStore } from "@/stores/locale"
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 
 
 const themeStore = useThemeStore()
@@ -92,17 +91,17 @@ const handleScroll = () => {
   // 当滚动超过 50px 时，切换样式
   isScrolled.value = window.scrollY > 64
 }
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 
 // -- 点击按钮切换语言
 const localStore = useLocaleStore();
 const toggleLang = async () => {
   await localStore.toggle();
 };
-
+const menuData = computed(() => localStore.commonData?.menuData);
+onMounted(async () => {
+  window.addEventListener('scroll', handleScroll);
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 </script>
