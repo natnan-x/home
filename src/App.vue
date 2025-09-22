@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch, onMounted } from "vue";
+import { watch } from "vue";
 import { RouterView, useRoute } from "vue-router";
 import { useThemeStore } from "./stores/theme.js";
 import { useLocaleStore } from "@/stores/locale.js";
@@ -9,10 +9,12 @@ themeStore.initTheme(); // 初始化主题
 
 const store = useLocaleStore();
 const route = useRoute();
-const pageData = ref({});
 // 封装加载页面数据
 async function loadPageData(pageName) {
-  pageData.value = await store.initPage(pageName);
+  await store.initPage(pageName);
+}
+async function loadCommonData() {
+  await store.initCommon();
 }
 
 // 监听路由变化
@@ -27,7 +29,10 @@ watch(
 watch(
   () => store.current,
   () => {
-    if (route.name) loadPageData(route.name);
+    if (route.name) {
+      loadPageData(route.name)
+      loadCommonData()
+    };
   }
 );
 </script>

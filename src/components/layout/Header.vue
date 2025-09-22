@@ -32,7 +32,6 @@
           <!-- {{ localStore.current === 'en' ? 'ZH' : 'EN' }} -->
         </p>
       </div>
-
     </div>
     <!-- dialog -->
     <dialog id="my_menu_modal" class="modal items-start pt-4 backdrop-blur-xs">
@@ -59,8 +58,8 @@ import { Moon, Sun, ChevronDown, Languages } from 'lucide-vue-next';
 import { storeToRefs } from 'pinia'
 import { useThemeStore } from '@/stores/theme'
 import { useLocaleStore } from "@/stores/locale";
-import { menuData } from '@/data/menu.js'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+
 
 const themeStore = useThemeStore()
 

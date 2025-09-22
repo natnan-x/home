@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:px-25 max-w-6xl mx-auto flex flex-col justify-between h-screen md:justify-center">
+  <div class="min-h-[var(--vh)] bg-gray-100 lg:px-25 max-w-6xl mx-auto flex flex-col justify-between md:justify-center">
     <div class="flex-1 py-12 px-8 text-lg leading-relaxed text-left md:flex-none">
       <h1 class="text-sm font-medium">NatNan</h1>
       <div class="divider divider-start font-bold mt-1">欢迎你的到来</div>
@@ -20,6 +20,7 @@ import Typewriter from "t-writer.js";
 import { SquareArrowRight } from "lucide-vue-next";
 import { loadPageMessages } from "@/utils/loadLocaleMessages.js";
 import i18n from "@/main";
+
 
 const typeTarget = ref(null);
 
@@ -47,5 +48,14 @@ const startTypewriter = () => {
 onMounted(async () => {
   await loadPageMessages("home");
   startTypewriter();
+  setVh()
+  window.addEventListener('resize', setVh)
+  window.addEventListener('orientationchange', setVh)
 });
+
+// 动态设置 --vh，保证 iOS Safari 正确显示
+const setVh = () => {
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`)
+}
+
 </script>

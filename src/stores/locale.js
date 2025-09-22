@@ -5,12 +5,13 @@ export const useLocaleStore = defineStore("locale", {
   state: () => ({
     current: "zh", // 当前语言
     pageData: {}, // key = 页面 name, value = 对应语言数据
+    commonData: {},
   }),
   actions: {
     async toggle() {
       this.current = this.current === "en" ? "zh" : "en";
       i18n.global.locale.value = this.current;
-
+      await this.initCommon();
       // 刷新已加载页面的数据
       const pages = Object.keys(this.pageData);
       for (const page of pages) {
@@ -32,6 +33,11 @@ export const useLocaleStore = defineStore("locale", {
       const data = await this.loadPageMessages(page);
       this.pageData[page] = data;
       return data;
+    },
+
+    async initCommon() {
+      const module = await import(`../data/common.${this.current}.js`);
+      this.commonData = module;
     },
   },
 });

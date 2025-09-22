@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full flex-col pt-6">
+  <div class="flex w-full flex-col pt-6 min-h-screen ">
     <LayoutHeader />
     <div class="lg:px-25 px-4 max-w-6xl mx-auto">
       <main>
