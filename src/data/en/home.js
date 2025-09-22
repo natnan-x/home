@@ -1,12 +1,12 @@
 export default {
   typewriter: [
-    "ddddd<br>",
-    "科学往往经过筛选,<br>",
-    "<strong>真相往往难以发现。</strong><br><br>",
-    "当我们推出新的 GF 15% 解决方案时<br>",
-    "我们将复杂的科学论文<br>",
-    "拆解成易于理解的内容<br>",
-    "澄清行业误区。<br><br>",
-    "<strong>因为真相应该很平凡。</strong>",
+    "This is the little universe of Vue and Tailwind.<br>",
+    "No flashy interactions, no complicated rules,<br>",
+    "and definitely no exams—just a relaxed vibe,and maybe, a curious soul hiding somewhere.<br><br>",
+    "<strong>Let’s give each other 5 minutes—</strong><br><br>",
+    "about the length of a song.<br>",
+    "Like it or not, you’re already here.<br>",
+    "And if you spot a bug, don’t worry，it’s probably an Easter egg I planted.<br><br>",
+    "<strong>Thanks for reading!</strong>",
   ],
 };

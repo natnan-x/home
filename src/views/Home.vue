@@ -7,7 +7,7 @@
     </div>
     <div
       class="flex justify-between h-14 px-8 bg-black opacity-90 text-white items-center cursor-pointer md:w-30 md:m-8 md:px-4"
-      @click="$router.push('/work')">
+      @click="$router.push('/about')">
       <span>ENTER</span>
       <SquareArrowRight />
     </div>
