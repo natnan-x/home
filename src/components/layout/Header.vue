@@ -4,7 +4,7 @@
     <div class="flex justify-between px-4 lg:max-w-6xl lg:px-25 mx-auto">
       <div class="avatar" @click="$router.push('/')">
         <div class="w-10 rounded-full">
-          <img src="../../assets/portrait.webp" />
+          <img src="../../assets/keep.jpg" class="grayscale" />
         </div>
       </div>
       <div class="items-center space-x-2 shadow rounded-full px-4 hidden lg:flex">
