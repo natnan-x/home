@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-[var(--vh)] bg-gray-100 lg:px-25 max-w-6xl mx-auto flex flex-col justify-between md:justify-center">
+  <div class="min-h-[var(--vh)] lg:px-25 max-w-6xl mx-auto flex flex-col justify-between md:justify-center">
     <div class="flex-1 py-12 px-8 text-lg leading-relaxed text-left md:flex-none">
       <h1 class="text-sm font-medium">NatNan</h1>
       <div class="divider divider-start font-bold mt-1">欢迎你的到来</div>

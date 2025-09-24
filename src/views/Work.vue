@@ -12,20 +12,26 @@
       <div v-for="(value, index) in source?.list" :key="index">
         <article class="md:grid md:grid-cols-4 md:items-baseline">
           <p class="opacity-50 text-sm border-l-2 pl-2 lg:border-0 lg:pl-0">
-            {{ value.end_time }}
+            {{ value.year }}
           </p>
-          <div class="md:col-span-3 mb-9 lg:p-5 rounded-2xl transition cursor-pointer hover:bg-base-300 px-0 py-3">
-            <h2 class="text-xl">{{ value.title }}</h2>
-            <p class="text-sm opacity-70 mt-2 leading-relaxed">
-              When we released the first version of cosmOS last year, it was
-              written in Go. Go is a wonderful programming language with a lot
-              of benefits, but it’s been a while since I’ve seen an article on
-              the front page of Hacker News about rewriting some important tool
-              in Go and I see articles on there about rewriting things in Rust
-              every single week.
-            </p>
-            <p class="text-sm mt-3 text-teal-500">more ></p>
-          </div>
+          <template v-if="value.block">
+            <div
+              class="pt-4 pb-10 md:col-span-3 md:p-5 rounded-2xl md:hover:bg-base-300 transition cursor-pointer md:mb-8">
+              <h2 class="text-xl flex items-center">{{ value.title }}
+                <Link size="16" class="ml-4" />
+              </h2>
+              <div class="text-sm opacity-70 mt-2 leading-relaxed">
+                <p v-for="(val, idx) in value.content" :key="idx">{{ val }}</p>
+              </div>
+            </div>
+          </template>
+          <template v-else>
+            <div class="pt-4 pb-10 md:col-span-3 md:p-5 rounded-2xl cursor-pointer opacity-60">
+              <h2 class="text-xl flex items-center">{{ value.title }}
+                <Link size="16" class="ml-4" />
+              </h2>
+            </div>
+          </template>
         </article>
       </div>
     </div>
@@ -34,6 +40,8 @@
 <script setup>
 import { computed } from "vue";
 import { useLocaleStore } from "@/stores/locale"
+import { Link } from 'lucide-vue-next';
+
 const localStore = useLocaleStore();
 const source = computed(() => localStore.pageData?.work);
 
