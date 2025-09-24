@@ -1,5 +1,4 @@
 <template>
-  <div class="w-full bg-gray-200">sdsd</div>
   <div class="max-w-2xl pt-30">
     <h1 class="text-4xl font-bold">
       {{ source?.title }}
@@ -8,8 +7,9 @@
       {{ source?.desc }}
     </p>
   </div>
-  <div class="mt-16 sm:mt-20 w-full bg-gray-200">
 
+
+  <div class="mt-16">
     <ul class="list bg-base-100 mb-10" v-for="(value, index) in source?.list" :key="index">
 
       <li class="pb-2 tracking-wide font-bold text-xl">{{ value.name }}</li>

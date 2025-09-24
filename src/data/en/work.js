@@ -1,47 +1,64 @@
 export default {
-  title: "参与多家企业数字化转型，涉及领域建筑装饰、高端猎头、智慧城市等",
-  desc: "我的工作履历、按照时间顺序收集如下，过于久远的不再添加。",
+  title:
+    "Participated in digital transformation projects for multiple enterprises across industries including architecture & interior design, executive recruitment, and smart city solutions.",
+  desc: "Below is my work experience organized in chronological order. Older positions are summarized briefly; I am grateful to my former employers for supporting my growth.",
   list: [
     {
       year: "2022 - 至今",
       work_year: 3,
-      title: "尚层装饰（苏州）有限公司",
+      title: "Shangceng Decoration (Beijing) Co., Ltd., Suzhou Branch",
+      link: "https://www.shangceng.com.cn/",
       content: [
-        "Led front-end development for the “Customer Acquisition” team within the Digital Platform Department. Delivered multiple products from 0 to 1, including WeCom, PC admin panel, supplier platform, and mini-programs. Achieved 6.30 and 9.30 milestones under high workload, enabling full offline-to-online transformation across the customer lifecycle: acquisition → dispatch → appointment → contract → construction → after-sales.",
+        "Founding member of the Development Team under the Digital Platform Department. Later took independent charge of front-end development for the Customer Acquisition group. Contributed end-to-end to multiple key products, including WeCom, PC admin panel, supplier platform, official website mini-program, and client mini-program, all built from 0 to 1. Successfully delivered the 6.30 and 9.30 milestones under heavy workload, driving full offline-to-online transformation across the business lifecycle: customer acquisition → auto-dispatch → appointment → contract (conversion) → construction → after-sales.",
       ],
+      more: "more >",
       block: true,
     },
     {
       year: "2019 - 2022",
       work_year: 3,
-      title: "科锐国际（苏州）- 技术部",
+      title:
+        "Beijing Career International Human Resources Co., Ltd., Suzhou Branch",
+      link: "https://www.careerintlinc.com/",
       content: [
-        "Rehired into the Technology Department for a role requiring expertise in AngularJS 1.4x and Vue 2. Later contributed to framework unification, migrating front-end to React and back-end to Java. Maintained the Caike project management admin panel and participated in building the Career CRM system as well as supporting product lines such as Yimai and Hewa.",
+        "Rehired into the Technology Department for a role requiring expertise in AngularJS1.4x and Vue2. Later supported the department’s technology unification, migrating front-end frameworks to React and back-end to Java. Maintained the Caike project team’s admin panel, and contributed to the development of the Career CRM system as well as product lines including Yimai and Hewa.",
       ],
+      more: "more >",
       block: true,
     },
     {
       year: "2017 - 2019",
       work_year: 2,
-      title: "科锐国际（苏州）- 才客项目组",
+      title:
+        "Beijing Career International Human Resources Co., Ltd., Suzhou Branch – Caike Project Team",
+      link: "https://www.careerintlinc.com/",
       content: [
-        "Worked in the Caike Technology Department, contributing to multiple modules including consultant, operations, finance, and legal systems, as well as WeChat Official Account development. Ensured stable operation of legacy projects built with AngularJS, while successfully leading the team’s technology stack migration to Vue2.",
+        "Worked in the Caike Technology Department, contributing to modules including consultant, operations, finance, and legal systems, as well as WeChat Official Account development. Ensured stable operation of legacy projects built on AngularJS, while successfully leading the team’s technology stack migration to Vue2.",
       ],
+      more: "more >",
       block: true,
     },
     {
       year: "2016 - 2017",
       work_year: 1,
-      title: "苏州盛景信息科技股份公司",
+      title: "Suzhou Shengjing Information Technology Co., Ltd.",
+      link: "http://mapscene365.com/Index.html",
       content: "",
       block: false,
     },
     {
       year: "2017 - 2019",
       work_year: 3,
-      title: "北京购阿购技术服务有限公司",
+      title:
+        "Beijing Gouagou Technology Service Co., Ltd.(Data-Driven Technology)",
+      link: "https://www.ddriven-tech.com/",
       content: "",
       block: false,
     },
   ],
+  dialog: {
+    title: "Confirm navigation?",
+    confirm: "confirm",
+    cancel: "close",
+  },
 };
