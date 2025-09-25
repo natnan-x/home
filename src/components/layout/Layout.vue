@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full flex-col pt-6 min-h-screen ">
     <LayoutHeader />
-    <div class="lg:px-25 px-4 max-w-6xl mx-auto">
+    <div class="w-full flex flex-col px-4 lg:max-w-6xl lg:px-25 mx-auto">
       <main>
         <!-- 子页面渲染在这里 -->
         <RouterView />

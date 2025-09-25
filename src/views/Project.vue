@@ -1,5 +1,4 @@
 <template>
-  <div class="w-full bg-gray-200">sdsd</div>
   <div class="max-w-2xl pt-30">
     <h1 class="text-4xl font-bold">
       {{ source?.title }}
@@ -8,25 +7,28 @@
       {{ source?.desc }}
     </p>
   </div>
-  <div class="mt-16 sm:mt-20 w-full bg-gray-200">
 
-    <ul class="list bg-base-100 mb-10" v-for="(value, index) in source?.list" :key="index">
+
+  <div class="mt-16">
+    <ul class="list bg-base-100 mb-10 w-max-6xl" v-for="(value, index) in source?.list" :key="index">
 
       <li class="pb-2 tracking-wide font-bold text-xl">{{ value.name }}</li>
 
       <li class="list-row p-0 pb-6 pt-6 border-0" v-for="(val, idx) in value.list" :key="idx">
         <div class="pr-15 text-sm opacity-70 mt-1">{{ val.year }}</div>
         <div>
-          <div class="font-semibold text-base">{{ val.name }}</div>
-          <div class="text-sm mt-2">
+          <div class="font-semibold text-base">
             <div class="inline-grid *:[grid-area:1/1] mr-2">
               <div class="status animate-ping"></div>
               <div class="status"></div>
-            </div> {{ val.job }}
+            </div>{{ val.name }}
+          </div>
+          <div class="text-xs mt-2 opacity-75 border-l pl-3">
+            {{ val.desc }}
           </div>
           <div class="pt-3">
             <div class="badge badge-soft badge-success badge-sm mr-2" v-for="(v, i) in val.tags" :key="i">{{ v
-            }}
+              }}
             </div>
           </div>
         </div>
