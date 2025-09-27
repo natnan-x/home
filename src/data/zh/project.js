@@ -9,23 +9,22 @@ export default {
       desc: "",
       list: [
         {
-          year: "2022-2025",
+          year: "2023-2025",
           name: "墅学家小程序",
           tags: ["微信原生开发", "skyline", "tdesign-miniprogram"],
           responsible: `
-          <p>
-            面向 <strong>C端用户</strong> 的家装小程序，提供在线墅装案例预览与精准用户画像，同时为设计师提供案例上传与主页编辑功能，构建用户与设计师的互动平台。
-          </p>
-          <ul class="mt-2 list-disc list-outside">
-            <li>独立负责 C 端小程序前端开发与迭代，主导开发周期与更新进度。</li>
-            <li>封装请求，实现表单提交与列表懒加载；接入全局数据上报并与管理后台联动，用于分析用户行为、路径与停留时长。</li>
-            <li>熟练掌握小程序生命周期、分包加载、授权登录、场景入口与支付功能，保障弱网与低端设备的稳定体验。</li>
+           <p>面向 <strong>C端用户</strong> ，提供 <strong>在线案例预览</strong> 与基于 <strong>用户喜好与路径跟踪</strong> 的精准 <strong>用户画像</strong>，支持 <strong>在线预约</strong>、 <strong>预约意向支付</strong> 等约见前全流程操作。
+
+           <ul class="mt-2 list-disc list-outside">
+            <li> 独立负责小程序前端架构搭建，基于 <span class="badge badge-ghost">微信原生开发 + Skyline 渲染引擎</span> 实现高性能渲染与跨页面数据管理，提供沉浸式案例预览体验；熟练掌握小程序生命周期、分包加载、授权登录、场景入口与支付功能，确保弱网和低端设备下的稳定运行。</li>
+            <li>封装 <span class="badge badge-ghost">wx.request</span> 与全局状态管理，实现表单提交、列表懒加载及用户行为数据上报，与管理后台联动进行业务分析。</li>
+            <li>应用 <span class="badge badge-ghost">TDesign-Miniprogram</span> 提供的表单、弹窗、导航等组件，快速构建多角色（网销、设计师）权限功能和操作流程。</li>
           </ul>
           `,
         },
         {
-          year: "2022-2025",
-          name: "PC-红珊瑚管理后台",
+          year: "2022-2024",
+          name: "红珊瑚管理后台",
           tags: ["Vue3", "Vuex", "Element Plus", "less", "ECharts"],
           responsible: `
             <p>
@@ -40,8 +39,8 @@ export default {
           `,
         },
         {
-          year: "2022-2025",
-          name: "H5-企业微信",
+          year: "2022-2024",
+          name: "企业微信",
           tags: ["Vue3", "Vuex", "Vant", "G2", "less"],
           responsible: `
           <p>
@@ -60,13 +59,13 @@ export default {
     {
       id: 2,
       name: "科锐国际",
-      year: "2022-2025",
+      year: "2017-2022",
       desc: "",
       list: [
         {
           name: "医脉、禾娃",
           tags: ["React", "Taro"],
-          year: "2022-2025",
+          year: "2021-2022",
           responsible: `
             <p>
               面向移动端的医疗与教育类应用，支持多平台（微信小程序、H5）访问，提供 <strong>数据展示</strong> 与 <strong>业务操作</strong> 功能。
@@ -81,7 +80,7 @@ export default {
         {
           name: "CRM管理系统",
           tags: ["React", "AntD"],
-          year: "2022-2025",
+          year: "2021-2022",
           responsible: `
             <p>
               企业客户关系管理系统，面向销售与业务团队，提供 <strong>客户管理</strong>、<strong>销售漏斗</strong> 与 <strong>数据报表</strong> 等功能。
@@ -96,7 +95,7 @@ export default {
         {
           name: "才客-顾问管理后台",
           tags: ["Vue2", "VueX", "Element UI", "AngularJS 1.4x"],
-          year: "2022-2025",
+          year: "2017-2021",
           responsible: `
             <p>
               企业顾问管理后台，由我主导开发和技术迁移，将原有 <span class="badge badge-ghost">AngularJS 1.4x</span> 项目迁移至 <span class="badge badge-ghost">Vue2</span> + <span class="badge badge-ghost">Vuex</span> 技术栈，实现现代化前端架构。
