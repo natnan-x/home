@@ -18,22 +18,14 @@
         <div class="pr-15 text-sm opacity-70 mt-1">{{ val.year }}</div>
         <div>
           <div class="font-semibold text-base">
-            <div class="inline-grid *:[grid-area:1/1] mr-2">
-              <div class="status animate-ping"></div>
-              <div class="status"></div>
-            </div>{{ val.name }}
+            {{ val.name }}
           </div>
-          <div class="text-xs mt-2 opacity-75 border-l pl-3">
-            {{ val.desc }}
-          </div>
-          <div class="pt-3">
+          <div class="pt-3 flex items-center">
             <div class="badge badge-soft badge-success badge-sm mr-2" v-for="(v, i) in val.tags" :key="i">{{ v
               }}
             </div>
           </div>
-        </div>
-        <div class="list-col-wrap text-xs">
-          <p class="pt-1" v-for="(v, i) in val.list" :key="i">{{ v }}</p>
+          <div class="list-col-wrap text-sm mt-4" v-html="val.responsible"></div>
         </div>
       </li>
     </ul>
