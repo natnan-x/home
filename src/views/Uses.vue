@@ -11,7 +11,7 @@
     class="mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
   >
     <div
-      class="bg-base-100 shadow-sm rounded-md hover:bg-base-300 transition"
+      class="bg-base-100 shadow-sm rounded-xl hover:bg-base-300 transition"
       v-for="value in source?.list"
       :key="value.id"
     >
@@ -24,12 +24,25 @@
   </div>
 
   <section
-    class="relative w-screen left-1/2 -translate-x-1/2 bg-base-200 py-24 mt-20"
+    class="relative w-screen left-1/2 -translate-x-1/2 bg-base-200 py-24 mt-20 overflow-hidden"
   >
+    <div
+      class="absolute left-0 top-10 -bottom-20 w-full flex flex-wrap gap-x-4 gap-y-2 justify-start"
+    >
+      <span
+        v-for="(item, index) in repeatedItems"
+        :key="index"
+        class="text-sm opacity-5 animate-bounce my-2 mx-10"
+        :style="{ animationDelay: `${index * 0.05}s` }"
+      >
+        {{ item }}
+      </span>
+    </div>
+
     <div class="px-4 lg:max-w-6xl lg:px-25 mx-auto">
       <h2 class="text-2xl font-bold">{{ source?.other?.desc }}</h2>
       <div class="mockup-code w-full mt-10">
-        <pre><code>pnpm element-plus ant-design-vue vant tailwind </code></pre>
+        <pre><code>pnpm element-plus ant-design-vue vant</code></pre>
         <pre><code>pnpm echarts @antv/g2</code></pre>
         <pre>pnpm tailwind</pre>
       </div>
@@ -52,7 +65,7 @@
       </div>
       <div class="diff-resizer"></div>
     </figure>
-    <section>
+    <section class="mb-3">
       <div class="mb-12" v-for="(val, idx) in source?.other?.list" :key="idx">
         <p class="font-semibold">{{ val.category }}</p>
         <div v-for="(v, i) in val?.items" :key="i" class="text-sm mt-4">
@@ -68,11 +81,29 @@
       </div>
     </section>
   </div>
+  <ContactComponents />
 </template>
 <script setup>
+  import ContactComponents from "@/components/common/contact.vue";
   import { computed } from "vue";
   import { useLocaleStore } from "@/stores/locale";
 
   const localStore = useLocaleStore();
   const source = computed(() => localStore.pageData?.uses);
+
+  const items = [
+    "element-plus",
+    "ant-design-vue",
+    "vant",
+    "echarts",
+    "@antv/g2",
+    "less/sass",
+    "tailwind",
+  ];
+
+  // 重复 20 次
+  const repeatCount = 20;
+  const repeatedItems = Array.from({ length: repeatCount }).flatMap(
+    () => items
+  );
 </script>
