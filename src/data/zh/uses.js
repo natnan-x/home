@@ -26,5 +26,54 @@ export default {
   ],
   other: {
     desc: "日常开发中常用 UI 框架、可视化工具和样式预处理器来提升效率和体验。",
+    list: [
+      {
+        category: "UI 框架",
+        overview:
+          "常用 UI 框架帮助快速构建界面组件，提高开发效率与视觉一致性。",
+        items: [
+          {
+            name: "Element UI / Element Plus",
+            desc: "长期用于企业后台系统，熟悉组件封装与二次开发。",
+          },
+          {
+            name: "Vant",
+            desc: "移动端项目常用，掌握表单、列表、交互等核心组件的高效组合。",
+          },
+          {
+            name: "TDesign",
+            desc: "小程序与 Web 项目均有使用，熟悉主题定制与跨端适配。",
+          },
+        ],
+      },
+      {
+        category: "可视化",
+        overview: "可视化工具用于数据展示与业务洞察，帮助快速理解复杂信息。",
+        items: [
+          {
+            name: "ECharts",
+            desc: "擅长大屏可视化与数据交互，掌握图表性能优化与自定义渲染。",
+          },
+          {
+            name: "AntV G2",
+            desc: "熟悉语法式图表声明，能实现复杂多维度可视化场景。",
+          },
+        ],
+      },
+      {
+        category: "样式与预处理器",
+        overview: "样式工具与预处理器帮助构建可维护、响应式和高性能的界面。",
+        items: [
+          {
+            name: "Less / Sass",
+            desc: "熟悉变量、Mixin 与模块化，提升样式复用性与可维护性。",
+          },
+          {
+            name: "Tailwind CSS",
+            desc: "熟练掌握原子化 CSS，结合 Vue3/React 快速构建响应式布局与动画效果。",
+          },
+        ],
+      },
+    ],
   },
 };

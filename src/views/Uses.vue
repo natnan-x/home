@@ -35,16 +35,38 @@
       </div>
     </div>
   </section>
-  <div>
-    <figure class="diff aspect-16/9" tabindex="0">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 pt-20">
+    <figure
+      class="diff aspect-[1/0.5] lg:aspect-[4/5.1] rounded-2xl"
+      tabindex="0"
+    >
       <div class="diff-item-1" role="img" tabindex="0">
-        <img alt="daisy" src="../assets/portrait.webp" />
+        <img class="grayscale" alt="daisy" src="../assets/images/laptop.jpg" />
       </div>
       <div class="diff-item-2" role="img">
-        <img alt="daisy" class="blur-md" src="../assets/portrait.webp" />
+        <img
+          alt="daisy"
+          class="blur-md grayscale"
+          src="../assets/images/laptop.jpg"
+        />
       </div>
       <div class="diff-resizer"></div>
     </figure>
+    <section>
+      <div class="mb-12" v-for="(val, idx) in source?.other?.list" :key="idx">
+        <p class="font-semibold">{{ val.category }}</p>
+        <div v-for="(v, i) in val?.items" :key="i" class="text-sm mt-4">
+          <div>
+            <span class="font-medium">{{ v.name }}</span
+            ><span class="opacity-70 ml-1">{{ v.desc }}</span>
+          </div>
+          <div class="flex justify-between my-4">
+            <div class="border-b-1 w-5 mr-2"></div>
+            <div class="border-b-1 flex-1 opacity-10"></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 <script setup>
