@@ -36,6 +36,11 @@ const router = createRouter({
           name: "project",
           component: () => import("../views/Project.vue"),
         },
+        {
+          path: "/uses",
+          name: "uses",
+          component: () => import("../views/Uses.vue"),
+        },
       ],
     },
     // ⚡ 404 页面必须放在最后
