@@ -7,7 +7,7 @@ export default {
       fullName: "Project Experience",
       path: "/project",
     },
-    { name: "Uses", fullName: "Using Tools", path: "/uses" },
+    { name: "Uses", fullName: "Using Tools", path: "/use" },
     { name: "Life", fullName: "Rich Life", path: "/life" },
   ],
 };

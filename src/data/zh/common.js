@@ -7,7 +7,7 @@ export default {
       fullName: "项目经验",
       path: "/project",
     },
-    { name: "工具", fullName: "使用过工具", path: "/uses" },
+    { name: "工具", fullName: "使用过工具", path: "/use" },
     { name: "生活", fullName: "生活中的我", path: "/life" },
   ],
 };

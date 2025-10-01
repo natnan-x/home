@@ -37,15 +37,24 @@ const router = createRouter({
           component: () => import("../views/Project.vue"),
         },
         {
-          path: "/uses",
-          name: "uses",
-          component: () => import("../views/Uses.vue"),
+          path: "/use",
+          name: "use",
+          component: () => import("../views/Use.vue"),
         },
       ],
     },
     // ⚡ 404 页面必须放在最后
     { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // 如果是浏览器前进/后退
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      // 每次切换路由都滚动到顶部
+      return { left: 0, top: 0 };
+    }
+  },
 });
 
 export default router;

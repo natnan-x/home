@@ -6,6 +6,7 @@ import { createI18n } from "vue-i18n";
 
 import App from "./App.vue";
 import router from "./router/index.js";
+import animate from "./directives/animate.js";
 
 // 初始化 i18n
 const i18n = createI18n({
@@ -17,6 +18,7 @@ const i18n = createI18n({
 });
 
 const app = createApp(App);
+app.directive("animate", animate);
 
 app.use(createPinia());
 app.use(router);
