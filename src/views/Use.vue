@@ -17,11 +17,15 @@
       :key="value.id"
     >
       <div class="p-5 py-6">
-        <div class="flex items-center">
-          <img :src="value?.icon" :alt="value.name" class="w-10" />
+        <div class="flex items-center justify-start">
+          <component :is="value?.icon" :alt="value?.name" class="w-10 h-10" />
           <template v-if="value.id == 2">
             <Plus class="mx-3" size="20" />
-            <img :src="value?.icon2" :alt="value.name" class="w-9.5" />
+            <component
+              :is="value?.icon2"
+              :alt="value?.name"
+              class="w-10 h-10"
+            />
           </template>
         </div>
         <h2 class="text-lg font-bold mt-3">{{ value.name }}</h2>

@@ -3,6 +3,8 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import vueDevTools from "vite-plugin-vue-devtools";
 import tailwindcss from "@tailwindcss/vite";
+import svgLoader from "vite-svg-loader";
+
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -11,7 +13,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx(), vueDevTools(), tailwindcss()],
+  plugins: [vue(), vueJsx(), vueDevTools(), tailwindcss(), svgLoader()],
   css: {
     postcss: "./postcss.config.js", // 确保 Vite 使用了正确的 postcss 配置
   },

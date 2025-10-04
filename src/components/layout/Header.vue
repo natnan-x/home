@@ -32,11 +32,10 @@
       </div>
       <div class="flex lg:hidden flex-1 items-center justify-end">
         <div
-          class="p-2 pl-3 rounded-full mr-4 shadow flex items-center justify-center"
+          class="p-2 rounded-[9px] mr-4 shadow flex items-center justify-center"
           @click="openMenu"
         >
-          <span class="text-xs mr-1">Menu</span>
-          <ChevronDown size="16" />
+          <Menu size="16" />
         </div>
       </div>
       <div class="flex items-center justify-end space-x-4">
@@ -67,7 +66,7 @@
             :class="
               value.current ? ' text-teal-500' : 'opacity-60 hover:opacity-100'
             "
-            @click="closeMenu"
+            @click="closeMenu(value)"
           >
             {{ value.fullName }}
           </li>
@@ -77,8 +76,8 @@
   </div>
 </template>
 <script setup>
-  import { useRoute } from "vue-router";
-  import { Moon, Sun, ChevronDown, Languages } from "lucide-vue-next";
+  import { useRoute, useRouter } from "vue-router";
+  import { Moon, Sun, Menu, Languages } from "lucide-vue-next";
 
   import { storeToRefs } from "pinia";
   import { useThemeStore } from "@/stores/theme";
@@ -102,9 +101,10 @@
       menuModal.showModal();
     }
   };
-
-  const closeMenu = () => {
+  const router = useRouter();
+  const closeMenu = (value) => {
     const menuModal = document.getElementById("my_menu_modal");
+    router.push(value.path);
     if (menuModal) {
       menuModal.close();
     }

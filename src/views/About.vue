@@ -2,7 +2,7 @@
   <div
     class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 pt-30"
   >
-    <div class="lg:pl-20">
+    <div v-animate="{ type: 'fade-up', delay: 300 }" class="lg:pl-20">
       <figure class="hover-gallery max-w-xs px-2.5 lg:max-w-none rotate-3">
         <img
           class="aspect-square bg-zinc-100 dark:bg-zinc-800 object-cover rounded-2xl"
@@ -19,42 +19,44 @@
       </figure>
     </div>
     <div class="lg:order-first lg:row-span-2">
-      <h1 class="text-4xl font-bold">
+      <h1
+        v-animate="{ type: 'fade-up', delay: 300 }"
+        class="text-4xl font-bold"
+      >
         {{ pageData.title }}
       </h1>
       <div class="mt-6 space-y-7 text-base opacity-60">
-        <p v-for="line in pageData.content" :key="line">{{ line }}</p>
+        <p
+          v-animate="{ type: 'fade-up', delay: 300 }"
+          v-for="(line, index) in pageData.desc"
+          :key="index"
+        >
+          {{ line }}
+        </p>
       </div>
     </div>
     <div class="lg:pl-20">
-      <ul role="list">
-        <li class="flex">
+      <ul class="list">
+        <li
+          v-animate="{ type: 'fade-up', delay: 300 }"
+          v-for="(value, index) in pageData?.list"
+          :key="index"
+          class="mb-4"
+          :class="{
+            'pt-4 border-t flex border-[color:var(--color-base-300)]':
+              value?.border,
+          }"
+        >
           <a
             href="javascript:;"
             class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
-            @click="$router.push('/')"
+            @click="$router.push(value.path)"
           >
-            <Globe size="20" />
-            <span class="ml-4">Follow My Website</span>
-          </a>
-        </li>
-        <li class="flex mt-4">
-          <a
-            class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
-            href="#"
-          >
-            <Github size="20" /><span class="ml-4">Follow on GitHub</span>
-          </a>
-        </li>
-        <li
-          class="mt-8 border-t flex pt-8 border-[color:var(--color-base-300)]"
-        >
-          <a
-            class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
-            href="mailto:natnan0405@163.com?subject=Hello&body=这里写邮件内容"
-          >
-            <Mail size="20" />
-            <span class="ml-4">natnan0405@163.com</span>
+            <component
+              :is="value.icon"
+              class="w-5 h-5 text-gray-500 group-hover:text-teal-500 transition-colors duration-200"
+            />
+            <span class="ml-4">{{ value.desc }}</span>
           </a>
         </li>
       </ul>

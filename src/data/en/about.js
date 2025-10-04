@@ -1,11 +1,33 @@
+import weixinLogo from "../../assets/images/weixin-logo.svg?component";
+import { Github, Mail, Globe } from "lucide-vue-next";
 export default {
-  title:
-    "I’m NatNan, settled in Chengdu, Where I start a new chapter of my life.",
-  content: [
-    `I’ve always been curious about the world and rarely listen to ‘what others say.’ Trial and error is my favorite teacher—though I still take grandma’s advice."`,
-    `As I grew up, I met many friends: colleagues, basketball buddies, and cycling companions. Every encounter adds a splash of color to life.`,
-    `I have many passions: Higashino Keigo’s novels, exercise, iced Americanos, and cute little animals. Each teaches me something. Higashino once said, 'There are two things you cannot stare at directly: the sun and the human heart.' I choose to keep my heart towards the light. Exercise fuels me like I could go another five hundred years. My three cats and one dog taught me responsibility.`,
-    `Now, I’m a front-end developer. Coding feels like solving puzzles and stacking blocks—every line brings a little surprise. New technologies keep coming, whispering: don’t stand still. Embrace change, try boldly—that’s a game for the brave.`,
-    `Sincerity, trust, responsibility, positivity, and always facing the sun—these are my labels and my life compass.`,
+  title: "I'm Nan Nan, based in Chengdu, embarking on a new chapter of life...",
+  desc: [
+    "Since I can remember, I've been curious about the world, preferring to explore and learn through trial and error, though I still heed my grandmother's advice.",
+    "As I grew and entered society, I met many people—colleagues, sports buddies, and friends along my cycling journeys.",
+    "I have diverse interests: from reading Keigo Higashino, enjoying sports, iced Americanos, to cherishing small adorable lives. Each teaches me something—Higashino reminds me that 'two things in the world are unbearable to look at directly: the sun and the human heart.' As for me? I choose to keep my heart towards the light. Exercise fuels my energy, and my three cats and a dog teach me responsibility.",
+    "Today, I'm still a frontend developer. Writing code feels like solving puzzles and building with blocks—every line brings small surprises. The ever-evolving technology reminds me never to stand still. Embracing change and daring to experiment—that's the game for the brave.",
+    "Sincere, responsible, proactive, and challenge-driven—these are not only my personal labels but also my compass in life.",
+  ],
+  list: [
+    {
+      name: "Globe",
+      icon: Globe,
+      url: "natnan.com",
+      desc: "website",
+    },
+    {
+      name: "Github",
+      icon: Github,
+      url: "",
+      desc: "GitHub",
+    },
+    {
+      name: "wechat",
+      icon: weixinLogo,
+      desc: "NatNan45",
+      border: true,
+    },
+    { name: "Mail", icon: Mail, desc: "natnan0405@163.com" },
   ],
 };
