@@ -1,1 +1,0 @@
-const a={menuData:[{name:"关于",fullName:"关于我",path:"/about"},{name:"工作",fullName:"服务过的公司",path:"/work"},{name:"项目",fullName:"项目经验",path:"/project"},{name:"工具",fullName:"使用过工具",path:"/uses"},{name:"生活",fullName:"生活中的我",path:"/life"}]};export{a as default};

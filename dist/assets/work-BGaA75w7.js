@@ -1,1 +1,0 @@
-const e={title:"撰写有关软件设计、公司建设和航空航天工业的文章。",desc:"我关于编程、领导力、产品设计等的所有长篇思考，按时间顺序收集。",list:[{end_time:"2025-09",work_year:3,title:"尚层装饰（苏州）有限公司",desc:""},{end_time:"2022-02",work_year:3,title:"科锐国际（苏州）- 才客项目组",desc:""},{end_time:"2019-02",work_year:3,title:"科锐国际（苏州）",desc:""}]};export{e as default};
