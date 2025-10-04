@@ -5,6 +5,7 @@ export default {
     {
       id: 1,
       name: "尚层装饰",
+      abbreviation: "sczs",
       year: "2022-2025",
       desc: "",
       list: [
@@ -54,6 +55,7 @@ export default {
     {
       id: 2,
       name: "科锐国际",
+      abbreviation: "krgj",
       year: "2017-2022",
       desc: "",
       list: [

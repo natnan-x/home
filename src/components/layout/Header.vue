@@ -1,5 +1,6 @@
 <template>
   <div
+    id="header"
     class="transition-all duration-300 bg-base-100"
     :class="
       isScrolled

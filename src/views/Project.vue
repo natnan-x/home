@@ -11,8 +11,9 @@
   <div class="mt-16">
     <div
       class="list bg-base-100 mb-10 w-max-6xl"
-      v-for="(value, index) in source?.list"
-      :key="index"
+      v-for="value in source?.list"
+      :key="value.abbreviation"
+      :id="value.abbreviation"
     >
       <div
         v-animate="{ type: 'fade-up', delay: 300 }"
@@ -77,10 +78,41 @@
   </div>
 </template>
 <script setup>
-  // import { projectData } from "@/utils/data.js";
-  import { computed } from "vue";
-
+  import { computed, onMounted, nextTick } from "vue";
+  import { useRoute } from "vue-router";
   import { useLocaleStore } from "@/stores/locale";
   const localStore = useLocaleStore();
   const source = computed(() => localStore.pageData?.project);
+
+  const route = useRoute();
+  onMounted(async () => {
+    const targetName = route.query.name;
+    console.log(targetName);
+    if (targetName) {
+      setTimeout(() => {
+        scrollToCompany(targetName);
+      }, 800);
+    }
+  });
+
+  function scrollToCompany(name) {
+    nextTick(() => {
+      const el = document.getElementById(`${name}`);
+      if (!el) {
+        console.warn("未找到目标元素:", name);
+        return;
+      }
+
+      const rect = el.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      const targetY = rect.top + scrollTop;
+
+      window.scrollTo({
+        top: targetY - 140,
+        behavior: "smooth",
+      });
+    });
+  }
 </script>

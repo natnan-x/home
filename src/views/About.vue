@@ -50,7 +50,7 @@
           <a
             href="javascript:;"
             class="group flex text-sm font-medium transition hover:text-teal-500 opacity-80"
-            @click="$router.push(value.path)"
+            @click.prevent="handleClick(value)"
           >
             <component
               :is="value.icon"
@@ -62,12 +62,22 @@
       </ul>
     </div>
   </div>
+  <div
+    class="fixed transition-all duration-300 z-51 left-4 top-24 right-4"
+    v-show="alertObj.show"
+  >
+    <div role="alert" class="alert alert-soft" :class="alertObj.class">
+      <Check v-if="alertObj.class === 'alert-success'" size="20" />
+      <TriangleAlert v-else size="20" />
+      <span>{{ alertObj.message }}</span>
+    </div>
+  </div>
 </template>
 
 <script setup>
-  import { Github, Mail, Globe } from "lucide-vue-next";
-  import { computed, watch } from "vue";
-  import { useRoute } from "vue-router";
+  import { Check, TriangleAlert } from "lucide-vue-next";
+  import { computed, watch, reactive } from "vue";
+  import { useRoute, useRouter } from "vue-router";
   import { useLocaleStore } from "@/stores/locale";
 
   const store = useLocaleStore();
@@ -83,6 +93,45 @@
       // 当语言切换时 computed 自动更新 page
     }
   );
-</script>
 
-<style></style>
+  const router = useRouter();
+  let alertTimer = null;
+  const alertObj = reactive({
+    show: false,
+    message: "",
+    class: "",
+  });
+
+  async function handleClick(value) {
+    switch (value.type) {
+      case "website":
+        router.push("/");
+        break;
+      case "mail":
+        window.location.href = `mailto:${value.desc}`;
+        break;
+      default:
+        if (value.type === "weixin") {
+          try {
+            await navigator.clipboard.writeText(value.desc);
+          } catch (err) {
+            console.error(value.error, err);
+          }
+        }
+        // 清除之前的计时器
+        if (alertTimer) {
+          clearTimeout(alertTimer);
+          alertTimer = null;
+        }
+        // 显示提示
+        alertObj.class = value?.class;
+        alertObj.message = value?.message;
+        alertObj.show = true;
+        // 设置新的计时器
+        alertTimer = setTimeout(() => {
+          alertObj.show = false;
+          alertTimer = null;
+        }, 2000);
+    }
+  }
+</script>

@@ -1,3 +1,4 @@
+import { markRaw } from "vue";
 import weixinLogo from "../../assets/images/weixin-logo.svg?component";
 import { Github, Mail, Globe } from "lucide-vue-next";
 export default {
@@ -11,23 +12,26 @@ export default {
   ],
   list: [
     {
-      name: "Globe",
-      icon: Globe,
-      url: "natnan.com",
-      desc: "website",
+      type: "website",
+      icon: markRaw(Globe),
+      desc: "Website",
     },
     {
-      name: "Github",
-      icon: Github,
-      url: "",
+      type: "github",
+      icon: markRaw(Github),
       desc: "GitHub",
+      class: "alert-warning",
+      message: "很抱歉，GitHub暂不开放！",
     },
     {
-      name: "wechat",
-      icon: weixinLogo,
-      desc: "NatNan45",
+      type: "weixin",
+      icon: markRaw(weixinLogo),
+      desc: "NatNan045",
+      class: "alert-success",
       border: true,
+      message: "已复制到剪贴板：NatNan045",
+      error: "复制失败",
     },
-    { name: "Mail", icon: Mail, desc: "natnan0405@163.com" },
+    { type: "mail", icon: markRaw(Mail), desc: "natnan0405@163.com" },
   ],
 };

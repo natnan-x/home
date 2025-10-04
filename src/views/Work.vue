@@ -34,9 +34,17 @@
                 <p v-for="(val, idx) in value.content" :key="idx">{{ val }}</p>
               </div>
               <p class="pt-3">
-                <a class="text-sm link link-hover opacity-90">{{
-                  value.more
-                }}</a>
+                <a
+                  class="text-sm link link-hover opacity-90"
+                  a
+                  @click="
+                    $router.push({
+                      name: 'project',
+                      query: { name: value.abbreviation },
+                    })
+                  "
+                  >{{ value.more }}</a
+                >
               </p>
             </div>
           </template>
@@ -76,7 +84,7 @@
 <script setup>
   import { computed, ref, nextTick } from "vue";
   import { useLocaleStore } from "@/stores/locale";
-  import { ArrowUpRight } from "lucide-vue-next";
+  import { ArrowUpRight, Link } from "lucide-vue-next";
 
   const localStore = useLocaleStore();
   const source = computed(() => localStore.pageData?.work);

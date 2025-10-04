@@ -1,3 +1,5 @@
+import { markRaw } from "vue";
+
 import vueLogo from "../../assets/images/vue-logo.svg";
 import reactLogo from "../../assets/images/react-logo.svg";
 import wechatLogo from "../../assets/images/wechat-logo.svg";
@@ -10,20 +12,20 @@ export default {
     {
       id: 1,
       name: "Vue.js",
-      icon: vueLogo,
+      icon: markRaw(vueLogo),
       desc: "5 years of hands-on Vue.js experience. Proficient in the Vue ecosystem, including Vue Router, Composition API, state management (Vuex / Pinia), SSR, and performance optimization.",
     },
     {
       id: 2,
       name: "Mini Programs",
-      icon: wechatLogo,
-      icon2: uniappLogo,
+      icon: markRaw(wechatLogo),
+      icon2: markRaw(uniappLogo),
       desc: "Skilled in both native development and UniApp. Well-versed in Mini Program lifecycle, Skyline rendering engine, subpackage loading, authorization login, and payment workflows.",
     },
     {
       id: 3,
       name: "React",
-      icon: reactLogo,
+      icon: markRaw(reactLogo),
       desc: "Experienced with Hooks, functional components, and state management (Redux / Zustand), capable of rapidly building complex interactive applications.",
     },
   ],

@@ -6,6 +6,7 @@ export default {
       year: "2022 - 至今",
       work_year: 3,
       title: "尚层装饰（北京）有限公司苏州分公司",
+      abbreviation: "sczs",
       link: "https://www.shangceng.com.cn/",
       content: [
         "隶属于「数字平台部」，开发部门元老成员;",
@@ -21,6 +22,7 @@ export default {
       year: "2019 - 2022",
       work_year: 3,
       title: "科锐国际（苏州分公司）",
+      abbreviation: "krgj",
       link: "https://www.careerintlinc.com/",
       content: [
         "隶属于「技术部」，返聘入职（岗位需同时满足AngularJS1.4X、vue2）;",
@@ -34,6 +36,7 @@ export default {
       year: "2017 - 2019",
       work_year: 2,
       title: "科锐国际（苏州分公司）- 才客项目组",
+      abbreviation: "krgj",
       link: "https://www.careerintlinc.com/",
       content: [
         "隶属于「才客技术部」，涉及才客项目组，顾问端、运营端、财务端、法务端，以及微信公众号开发工作;",
@@ -46,7 +49,7 @@ export default {
       year: "2016 - 2017",
       work_year: 1,
       title: "苏州盛景信息科技股份公司",
-      link: "http://mapscene365.com/Index.html",
+      link: "http://mapscene365.com",
       content: "",
       block: false,
     },

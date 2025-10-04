@@ -6,6 +6,7 @@ export default {
     {
       id: 1,
       name: "Shangceng Decoration (Beijing) Co., Ltd., Suzhou Branch",
+      abbreviation: "sczs",
       year: "2022-2025",
       desc: "",
       list: [
@@ -56,6 +57,7 @@ export default {
     {
       id: 2,
       name: "Beijing Career International Human Resources Co., Ltd., Suzhou Branch",
+      abbreviation: "krgj",
       year: "2017-2022",
       desc: "",
       list: [
