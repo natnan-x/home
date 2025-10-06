@@ -19,7 +19,7 @@ export default {
       name: "小程序",
       icon: markRaw(wechatLogo),
       icon2: markRaw(uniappLogo),
-      desc: "精通原生开发+uniapp，熟练掌握小程序生命周期、Skyline 渲染引擎、分包加载、授权登录与支付流程等。",
+      desc: "精通微信原生开发+uniapp，熟练掌握小程序生命周期、Skyline 渲染引擎、分包加载、授权登录与支付流程等。",
     },
     {
       id: 3,

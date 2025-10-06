@@ -7,7 +7,7 @@ export default {
       id: 1,
       name: "Shangceng Decoration (Beijing) Co., Ltd., Suzhou Branch",
       abbreviation: "sczs",
-      year: "2022-2025",
+      year: "2022-2024",
       desc: "",
       list: [
         {

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/Home.vue";
 import DemoView from "../views/demo.vue";
+import CVView from "@/views/CV.vue";
 import NotFound from "@/views/NotFound.vue";
 
 const router = createRouter({
@@ -16,7 +17,11 @@ const router = createRouter({
       name: "demo",
       component: DemoView,
     },
-
+    {
+      path: "/cv",
+      name: "cv",
+      component: CVView,
+    },
     {
       path: "/",
       component: () => import("../components/layout/Layout.vue"),

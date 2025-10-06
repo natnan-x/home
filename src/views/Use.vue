@@ -56,7 +56,7 @@
           <div class="mockup-code w-full mt-10">
             <pre><code>pnpm element-plus ant-design-vue vant</code></pre>
             <pre><code>pnpm echarts @antv/g2</code></pre>
-            <pre>pnpm tailwind</pre>
+            <pre>pnpm tailwindcss</pre>
           </div>
         </div>
       </div>

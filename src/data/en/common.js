@@ -8,7 +8,7 @@ export default {
       path: "/project",
     },
     { name: "Use", fullName: "Using Tools", path: "/use" },
-    { name: "Life", fullName: "My Life", path: "/life" },
+    { name: "CV", fullName: "Resume Download", path: "/cv" },
   ],
   footerData: {
     title: "Tell Me Your Needs",

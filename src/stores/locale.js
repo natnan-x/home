@@ -3,7 +3,7 @@ import i18n from "@/main";
 
 export const useLocaleStore = defineStore("locale", {
   state: () => ({
-    current: "zh", // 当前语言
+    current: localStorage.getItem("local") || "zh", // 当前语言
     pageData: {}, // key = 页面 name, value = 对应语言数据
     commonData: {},
     loading: false, // 全局 loading
@@ -14,6 +14,7 @@ export const useLocaleStore = defineStore("locale", {
       this.loading = true;
       this.start = Date.now();
       this.current = this.current === "en" ? "zh" : "en";
+      localStorage.setItem("local", this.current);
       i18n.global.locale.value = this.current;
       // 刷新已加载页面的数据
       const pages = Object.keys(this.pageData);

@@ -12,7 +12,7 @@ import animate from "./directives/animate.js";
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: "zh", // 默认语言
+  locale: localStorage.getItem("local") || "zh", // 默认语言
   fallbackLocale: "en",
   messages: {},
 });

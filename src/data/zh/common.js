@@ -8,7 +8,7 @@ export default {
       path: "/project",
     },
     { name: "工具", fullName: "开发工具", path: "/use" },
-    { name: "生活", fullName: "我的生活", path: "/life" },
+    { name: "简历", fullName: "简历下载", path: "/cv" },
   ],
   footerData: {
     title: "告诉我你的需求",

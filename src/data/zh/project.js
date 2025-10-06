@@ -10,7 +10,7 @@ export default {
       desc: "",
       list: [
         {
-          year: "2023-2025",
+          year: "2023-2024",
           name: "墅学家小程序",
           tags: ["微信原生开发", "TDesign-Miniprogram"],
           responsible: `
