@@ -62,15 +62,15 @@ export default {
       desc: "",
       list: [
         {
-          name: "Yimai Tongdao & HeWa",
-          tags: ["React", "Taro"],
-          year: "2021-2022",
+          name: "Yimai Tongdao",
+          tags: ["React", "AntD"],
+          year: "2021–2022",
           responsible: `
-    Mobile application under Career International for <strong>online recruitment and talent services</strong>, covering <strong>healthcare</strong> and <strong>enterprise-headhunter connections</strong>. Supports <strong>WeChat Mini Program</strong> and <strong>H5</strong> platforms. Core features include <strong>job listings, candidate management, and workflow operations</strong>. Contributed as a later-stage developer, assisting in feature refinement and performance optimization.
+    Corporate websites under <strong>Career International</strong>, focusing on <strong>online recruitment and talent services</strong> for <strong>C-end users</strong>. The platforms highlight corporate branding and ecosystem information, covering sections such as <strong>About Us</strong>, <strong>Careers</strong>, <strong>Partners</strong>, and <strong>News</strong>. I participated as a later-stage developer, assisting in page structure optimization and maintaining visual consistency.
   `,
           list: [
-            `Participated in multi-platform development with <span class="badge badge-ghost font-medium">React + Taro</span>, improving code reuse between H5 and Mini Program.`,
-            `Assisted in building mobile forms, lists, and chart modules, enabling user interactions and business data handling.`,
+            `Developed PC websites based on <span class="badge badge-ghost font-medium">React + AntD</span>, optimizing content layout and presentation modules;`,
+            `Maintained shared components and styling system to ensure consistent design and cross-browser compatibility.`,
           ],
         },
         {

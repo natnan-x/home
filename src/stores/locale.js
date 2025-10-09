@@ -53,7 +53,6 @@ export const useLocaleStore = defineStore("locale", {
     async initPage(page) {
       const data = await this.loadPageMessages(page);
       this.pageData[page] = data;
-      console.log(this.pageData);
       return data;
     },
 

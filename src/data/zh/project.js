@@ -60,15 +60,15 @@ export default {
       desc: "",
       list: [
         {
-          name: "医脉同道、禾娃",
-          tags: ["React", "Taro"],
+          name: "医脉同道",
+          tags: ["React", "AntD"],
           year: "2021-2022",
           responsible: `
-            科锐国际旗下的 <strong>在线招聘与人才服务</strong> 移动端应用，涵盖 <strong>医疗健康</strong> 与 <strong>猎企链接</strong> 等细分场景，支持 <strong>微信小程序与 H5</strong> 多平台访问。主要功能包括 <strong>职位展示、候选人管理、业务流程操作</strong> 等。本人作为后期成员参与开发，协助功能完善与性能优化。
-          `,
+    科锐国际旗下的 <strong>在线招聘与人才服务</strong> 官网项目，面向 <strong>C端用户</strong> 展示企业品牌与行业生态，包含 <strong>公司介绍</strong>、<strong>人才招聘</strong>、<strong>合作伙伴</strong>、<strong>新闻资讯</strong> 等板块。我在项目中作为后期成员参与开发，协助页面结构优化与视觉一致性改进。
+  `,
           list: [
-            `参与 <span class="badge badge-ghost font-medium">React+Taro</span> 多端开发，提升 H5 与小程序的代码复用率；`,
-            `协助实现移动端表单、列表、图表模块，支持用户操作与业务数据交互；`,
+            `基于 <span class="badge badge-ghost font-medium">React+AntD</span> 进行 PC 官网开发，优化内容布局与模块展示；`,
+            `维护通用组件与样式体系，确保页面风格统一、兼容主流浏览器。`,
           ],
         },
         {

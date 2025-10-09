@@ -27,8 +27,6 @@
   import i18n from "@/main";
 
   const typeTarget = ref(null);
-  const theme = ref(localStorage.getItem("theme"));
-  console.log(theme.value);
   // 打字机函数
   const startTypewriter = () => {
     if (!typeTarget.value) return;

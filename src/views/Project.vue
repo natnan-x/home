@@ -87,7 +87,6 @@
   const route = useRoute();
   onMounted(async () => {
     const targetName = route.query.name;
-    console.log(targetName);
     if (targetName) {
       setTimeout(() => {
         scrollToCompany(targetName);
